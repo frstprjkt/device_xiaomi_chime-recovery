@@ -58,6 +58,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export FOX_DELETE_AROMAFM=1
     export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800"; # Tuesday, January 1, 2019 12:00:00 AM GMT+00:00
     export FOX_ENABLE_APP_MANAGER=0
+    export OF_FBE_METADATA_MOUNT_IGNORE=1
 
     # OTA
     export OF_KEEP_DM_VERITY=1
