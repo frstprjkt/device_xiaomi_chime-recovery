@@ -107,3 +107,6 @@ BOARD_USES_METADATA_PARTITION := true
 
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 
+# include python, for ABX conversion
+TW_INCLUDE_PYTHON := true
+#
