@@ -22,7 +22,7 @@ FDEVICE="juice"
 
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep -w $FDEVICE)
-   if [ -n "$chkdev" ]; then 
+   if [ -n "$chkdev" ]; then
       FOX_BUILD_DEVICE="$FDEVICE"
    else
       chkdev=$(set | grep BASH_ARGV | grep -w $FDEVICE)
@@ -53,28 +53,29 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_TAR_BINARY=1
 	export FOX_USE_SED_BINARY=1
 	export FOX_USE_XZ_UTILS=1
-    export OF_QUICK_BACKUP_LIST="/boot;/data;"
+        export OF_QUICK_BACKUP_LIST="/boot;/dtbo;"
 	export OF_PATCH_AVB20=1
-    export FOX_DELETE_AROMAFM=1
-    export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800"; # Tuesday, January 1, 2019 12:00:00 AM GMT+00:00
-    export FOX_ENABLE_APP_MANAGER=0
-    export OF_FBE_METADATA_MOUNT_IGNORE=1
+        export FOX_DELETE_AROMAFM=1
+        export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800"; # Tuesday, January 1, 2019 12:00:00 AM GMT+00:00
+	export FOX_USE_NANO_EDITOR=1
+	export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
+        export OF_FBE_METADATA_MOUNT_IGNORE=1
 
-    # OTA
-    export OF_KEEP_DM_VERITY=1
-    export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
-    export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
-    export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
+        # OTA
+        export OF_KEEP_DM_VERITY=1
+        export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
+        export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
+        export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 
 	# Screen settings
-	export OF_SCREEN_H=2400
-	export OF_STATUS_H=100
-	export OF_STATUS_INDENT_LEFT=48
-	export OF_STATUS_INDENT_RIGHT=48
+        export OF_SCREEN_H=2340
+        export OF_STATUS_H=80
+        export OF_STATUS_INDENT_LEFT=48
+        export OF_STATUS_INDENT_RIGHT=48
 	export OF_CLOCK_POS=1
 
-	# R11.1 Settings
-	export FOX_VERSION="R11.1_1"
+	# R12.1 Settings
+	export FOX_VERSION="R12.1_1"
 	export OF_MAINTAINER="frstprjkt."
 
 	# let's see what are our build VARs
