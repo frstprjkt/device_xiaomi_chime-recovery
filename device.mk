@@ -28,7 +28,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := vayu,bhima
+TARGET_OTA_ASSERT_DEVICE := citrus,lime,lemon,pomelo,juice,chime
 
 TARGET_COPY_OUT_VENDOR := vendor
 
