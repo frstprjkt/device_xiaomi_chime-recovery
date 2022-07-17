@@ -25,7 +25,7 @@ PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
 
-PRODUCT_SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := citrus,lime,lemon,pomelo,juice,chime
