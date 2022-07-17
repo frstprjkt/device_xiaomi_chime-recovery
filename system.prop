@@ -1,7 +1,7 @@
 ro.product.vendor.marketname=SM6115
 ro.product.board=chime
 ro.board.platform=bengal
-sys.usb.controller=a600000.dwc3
+sys.usb.controller=4e00000.dwc3
 sys.usb.rndis.func.name=rndis_bam
 sys.usb.rmnet.func.name=rmnet_bam
 persist.sys.isUsbOtgEnabled=true
