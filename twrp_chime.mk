@@ -32,3 +32,6 @@ PRODUCT_NAME := twrp_chime
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := SM6115
 PRODUCT_MANUFACTURER := Xiaomi
+
+# frstprjkt. TWRP version
+TW_DEVICE_VERSION  := frstprjkt
