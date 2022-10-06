@@ -36,13 +36,9 @@
 
 #<src>                                                 <mnt_point>            <type>  <mnt_flags and options>                            <fs_mgr_flags>
 system                                                  /system                  ext4    ro,barrier=1,discard                                 wait,logical,first_stage_mount,avb=vbmeta_system,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
-system                                                  /system                  erofs   ro                                                   wait,logical,first_stage_mount,avb=vbmeta_system,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
 system_ext                                              /system_ext              ext4    ro,barrier=1,discard                                 wait,logical,first_stage_mount,avb=vbmeta_system
-system_ext                                              /system_ext              erofs   ro                                                   wait,logical,first_stage_mount,avb=vbmeta_system
 product                                                 /product                 ext4    ro,barrier=1,discard                                 wait,logical,first_stage_mount,avb=vbmeta_system
-product                                                 /product                 erofs   ro                                                   wait,logical,first_stage_mount,avb=vbmeta_system
 vendor                                                  /vendor                  ext4    ro,barrier=1,discard                                 wait,logical,first_stage_mount,avb
-vendor                                                  /vendor                  erofs   ro                                                   wait,logical,first_stage_mount,avb
 /dev/block/bootdevice/by-name/cache                     /cache                   ext4    nosuid,noatime,nodev,barrier=1                       wait
 /dev/block/bootdevice/by-name/cache                     /cache                   f2fs    nosuid,nodev,noatime,barrier=1,inline_xattr,flush_merge,data_flush   wait
 /dev/block/by-name/metadata                             /metadata                ext4    noatime,nosuid,nodev,discard                         wait,formattable,check,data=journal,commit=1,wrappedkey,first_stage_mount
