@@ -9,7 +9,7 @@
 /system_ext         ext4     /dev/block/mapper/system_ext                             flags=backup=0;removable
 /vendor             ext4     /dev/block/mapper/vendor                                 flags=backup=0;removable
 /product            ext4     /dev/block/mapper/product                                flags=backup=0;removable
-/metadata           ext4     /dev/block/bootdevice/by-name/metadata                   flags=backup=0;wrappedkey;Display="Metadata"
+/metadata           ext4     /dev/block/bootdevice/by-name/metadata                   flags=backup=0;wrappedkey;display="Metadata"
 /data               f2fs     /dev/block/bootdevice/by-name/userdata                   flags=fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0,metadata_encryption=aes-256-xts:wrappedkey_v0,keydirectory=/metadata/vold/metadata_encryption
 /boot               emmc     /dev/block/bootdevice/by-name/boot
 /dtbo               emmc     /dev/block/bootdevice/by-name/dtbo                       flags=backup=1;display="DTBO";flashimg=1
