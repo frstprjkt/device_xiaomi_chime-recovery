@@ -48,6 +48,16 @@ service variant-script /system/bin/variant-script.sh
     oneshot
     seclabel u:r:recovery:s0
 
+on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
+    start patchfstab
+
+service patchfstab /system/bin/patchfstab.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
@@ -60,3 +70,5 @@ on boot
     start vendor.qti.vibrator
     setprop sys.usb.config adb
 
+on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
+    start patchfstab
